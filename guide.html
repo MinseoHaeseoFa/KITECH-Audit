@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KITECH-Audit 사용자 활용 가이드</title>
+  <title>KITECH 감사 그레이존 판례 DB (710선) 사용자 가이드</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -12,21 +12,21 @@
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
-  <!-- Top Banner -->
+  <!-- Header -->
   <header class="border-b border-slate-800 bg-slate-900/90 sticky top-0 backdrop-blur z-50">
-    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="max-w-4xl mx-auto px-4 py-3.5 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <a href="index.html" class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white shadow hover:bg-blue-500 transition">
+        <a href="db.html" class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white shadow hover:bg-blue-500 transition">
           <i class="fa-solid fa-scale-balanced text-sm"></i>
         </a>
         <div>
           <span class="text-[10px] font-bold px-1.5 py-0.2 rounded bg-blue-500/20 text-blue-400 border border-blue-500/30">KITECH 감사실</span>
-          <h1 class="text-sm font-bold text-white">KITECH-Audit 지능형 감사 포털 사용자 가이드</h1>
+          <h1 class="text-sm font-bold text-white">감사 그레이존 전문 판례 DB (710선) 사용자 가이드</h1>
         </div>
       </div>
-      <a href="index.html" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition flex items-center space-x-1.5">
-        <i class="fa-solid fa-arrow-left"></i>
-        <span>포털 바로가기</span>
+      <a href="db.html" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700 transition flex items-center space-x-1.5">
+        <i class="fa-solid fa-database text-blue-400"></i>
+        <span>판례 DB 바로가기</span>
       </a>
     </div>
   </header>
@@ -35,21 +35,21 @@
     <!-- Intro Flow Banner -->
     <section class="bg-slate-900 p-5 rounded-2xl border border-slate-800 shadow-lg space-y-3">
       <div class="flex items-center justify-between">
-        <span class="text-xs font-bold text-blue-400">실무 핵심 활용 흐름</span>
-        <span class="text-xs text-slate-400">소요 시간: 1분 완결</span>
+        <span class="text-xs font-bold text-blue-400">실무 3단계 활용 흐름</span>
+        <span class="text-xs text-slate-400">판례 검색부터 AI 법리 분석까지 1분 완결</span>
       </div>
       <div class="grid grid-cols-3 gap-2 text-center text-xs">
         <div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700">
           <span class="text-blue-400 font-bold block mb-1">1. 자연어 검색</span>
-          <span class="text-slate-300 text-[11px]">일반 단어로 판례 필터링</span>
+          <span class="text-slate-300 text-[11px]">업무 단어로 실시간 필터링</span>
         </div>
         <div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700">
-          <span class="text-emerald-400 font-bold block mb-1">2. 원문 직결 확인</span>
-          <span class="text-slate-300 text-[11px]">구글·네이버 법률 1-클릭</span>
+          <span class="text-emerald-400 font-bold block mb-1">2. 원문 1-클릭 조회</span>
+          <span class="text-slate-300 text-[11px]">구글·네이버 법률 & 구글 AI 개요</span>
         </div>
         <div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700">
-          <span class="text-purple-400 font-bold block mb-1">3. AI 법리 판정</span>
-          <span class="text-slate-300 text-[11px]">정황 입력 ➡️ 리스크 도출</span>
+          <span class="text-purple-400 font-bold block mb-1">3. 김비서 캡처 연동</span>
+          <span class="text-slate-300 text-[11px]">화면 캡처 전송 시 법리·조서 작성</span>
         </div>
       </div>
     </section>
@@ -58,18 +58,26 @@
     <section class="space-y-3">
       <div class="flex items-center space-x-2.5">
         <span class="w-6 h-6 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-xs">1</span>
-        <h2 class="text-base font-bold text-white">자연어 검색 : 단어 하나로 판례 710선 즉시 필터링</h2>
+        <h2 class="text-base font-bold text-white">자연어 검색 : 일상 업무 단어로 710선 판례 즉시 필터링</h2>
       </div>
       <p class="text-xs text-slate-400 leading-relaxed pl-8">
-        법률 용어나 사건번호를 몰라도 평소 쓰는 업무 단어(예: <code class="text-blue-300 bg-blue-950 px-1 py-0.2 rounded border border-blue-800">학생인건비 풀링</code>, <code class="text-blue-300 bg-blue-950 px-1 py-0.2 rounded border border-blue-800">출장 식대</code>)를 검색창에 치면 관련 판례만 즉시 화면에 남습니다.
+        사건번호나 법률 용어를 몰라도 괜찮습니다. 평소 쓰시는 업무 단어(예: <code class="text-blue-300 bg-blue-950 px-1 py-0.2 rounded border border-blue-800">학생인건비 풀링</code>, <code class="text-blue-300 bg-blue-950 px-1 py-0.2 rounded border border-blue-800">출장 식대</code>, <code class="text-blue-300 bg-blue-950 px-1 py-0.2 rounded border border-blue-800">쪼개기 계약</code>)를 검색창에 치면 타이핑과 동시에 관련 판례만 즉시 화면에 남습니다.
       </p>
-      <div class="pl-8 space-y-2">
+      <div class="pl-8 space-y-3">
         <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow">
-          <img src="guide_02_natural_search.png" alt="자연어 실시간 검색" class="w-full h-auto">
+          <img src="audit_db_01_dashboard.png" alt="판례 DB 메인 대시보드" class="w-full h-auto">
         </div>
-        <p class="text-[11px] text-slate-400">
-          ※ 각 카드 상단의 <span class="text-blue-300 font-semibold">4-Tier 배지</span>(대법원 판례 / 감사원 처분 / 부처 유권해석 / 원내 규정)로 공인 근거 등급을 바로 식별할 수 있습니다.
-        </p>
+        <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow">
+          <img src="audit_db_02_search.png" alt="자연어 검색 결과" class="w-full h-auto">
+        </div>
+        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800 text-xs text-slate-300 space-y-1">
+          <div class="font-bold text-slate-200">🔍 주요 화면 안내:</div>
+          <ul class="list-disc list-inside space-y-0.5 text-[11px] text-slate-400">
+            <li><strong>전체 710선 아카이브</strong>: 위법 처분 537건, 적법·면책 132건, 조건부 갈림 41건 실시간 통계</li>
+            <li><strong>4-Tier 다층 공인 근거</strong>: 사법 판례(71), 공인 처분(384), 정부 유권해석(211), 출연연 규정(44)</li>
+            <li><strong>6대 분야 퀵 필터</strong>: 연구비(110), 기술료(110), 계약·조달(110), 복무·이해충돌(110), HR 갑질(160), 적극행정(110)</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -77,28 +85,28 @@
     <section class="space-y-3">
       <div class="flex items-center space-x-2.5">
         <span class="w-6 h-6 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-xs">2</span>
-        <h2 class="text-base font-bold text-white">원문 직결 확인 : 구글·네이버 법률 전문 원클릭 조회</h2>
+        <h2 class="text-base font-bold text-white">원문 1-클릭 조회 : 구글·네이버 법률 검색 & 구글 AI 개요 직결</h2>
       </div>
       <p class="text-xs text-slate-400 leading-relaxed pl-8">
-        카드의 <strong>[상세보기]</strong>를 누르면 사실관계와 법적 판단기준이 팝업으로 열립니다. 하단 버튼을 클릭하면 새 창으로 공식 법률 전문이 바로 열립니다.
+        카드를 클릭하면 상세 팝업이 열리며 사실관계와 법적 판단기준이 나타납니다. 하단의 검색 버튼을 누르면 새 창으로 공식 전문과 구글 AI 요약이 바로 연결됩니다.
       </p>
-      <div class="pl-8 space-y-2">
+      <div class="pl-8 space-y-3">
         <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow">
-          <img src="guide_03_modal_detail.png" alt="판례 상세 및 원문 검색" class="w-full h-auto">
+          <img src="audit_db_03_modal.png" alt="판례 상세 및 원문 검색" class="w-full h-auto">
         </div>
         <div class="grid grid-cols-2 gap-2 text-xs">
           <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
-            <span class="font-bold text-blue-400 block mb-0.5">구글 법률 검색</span>
-            <span class="text-slate-400 text-[11px]">대법원 판결문 및 관련 학술·법률 원문 직결</span>
+            <span class="font-bold text-blue-400 block mb-0.5"> 구글 원문 검색</span>
+            <span class="text-slate-400 text-[11px]">대법원 판결문 원문 및 상단 <strong>구글 AI 개요(법리 분석)</strong> 자동 출력</span>
           </div>
           <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
-            <span class="font-bold text-emerald-400 block mb-0.5">네이버 법률 검색</span>
-            <span class="text-slate-400 text-[11px]">네이버 법률정보 및 관련 법령 조항 직결</span>
+            <span class="font-bold text-emerald-400 block mb-0.5">N 네이버 법률 검색</span>
+            <span class="text-slate-400 text-[11px]">네이버 법률정보 및 관련 법령 조항 전문 직결</span>
           </div>
         </div>
         <div class="p-3 bg-emerald-950/20 border border-emerald-500/30 rounded-xl text-xs text-slate-300">
           <span class="text-emerald-400 font-bold block mb-1">💡 감사인 실무 적용 체크포인트 (KITECH 적용)</span>
-          팝업 내에 KITECH 현업 감사인이 조사·결재 시 점검해야 할 핵심 조사 기법과 행정 조치 기준이 함께 제공됩니다.
+          팝업 내에 KITECH 현업 감사인이 일상감사 사전 예방 단계나 실지 조사에서 즉시 가동해야 할 실무 체크포인트(불시 계좌 실사, 직무 배제, 증빙 징구 요령 등)가 명시되어 있습니다.
         </div>
       </div>
     </section>
@@ -107,45 +115,27 @@
     <section class="space-y-3">
       <div class="flex items-center space-x-2.5">
         <span class="w-6 h-6 rounded-full bg-purple-600 text-white font-bold flex items-center justify-center text-xs">3</span>
-        <h2 class="text-base font-bold text-white">AI 법리 판정 : 정황 입력 ➡️ 리스크 & 처분 문안 즉시 도출</h2>
+        <h2 class="text-base font-bold text-white">김비서 AI 연동 : 캡처 전송 시 심층 법리 분석 및 감사 조서 작성</h2>
       </div>
       <p class="text-xs text-slate-400 leading-relaxed pl-8">
-        합·위법 여부가 애매한 현안이나 민원이 접수되었을 때 시스템 내 <strong>[판정 모의실 AI]</strong>에 정황을 서술형으로 입력하면 1초 만에 법리 분석이 완료됩니다.
+        별도의 외부 AI를 찾아갈 필요가 전혀 없습니다. 판례 DB 화면을 보시다가 더 깊은 법리 검토나 맞춤형 감사 조서 작성이 필요할 때는, 화면 캡처 이미지를 대화창에 올려주시거나 판례 번호(예: <code class="text-purple-300 bg-purple-950 px-1 py-0.2 rounded border border-purple-800">RND-01</code>)를 알려주시면 김비서가 즉시 핵심 법리 요약 및 실무 감사 조서를 작성해 드립니다.
       </p>
-      <div class="pl-8 space-y-2">
-        <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow">
-          <img src="guide_04_simulator.png" alt="판정 모의실 AI" class="w-full h-auto">
-        </div>
-        <div class="grid grid-cols-3 gap-2 text-center text-xs">
-          <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
-            <span class="font-bold text-red-400 block mb-0.5">위법 리스크 %</span>
-            <span class="text-slate-400 text-[11px]">데이터 기반 확률 산출</span>
+      <div class="pl-8">
+        <div class="p-3.5 bg-slate-900 rounded-xl border border-purple-500/30 text-xs space-y-1.5">
+          <div class="text-purple-300 font-bold flex items-center space-x-1.5">
+            <i class="fa-solid fa-comment-dots"></i>
+            <span>김비서 실무 요청 예시</span>
           </div>
-          <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
-            <span class="font-bold text-blue-400 block mb-0.5">결정적 법리 분기점</span>
-            <span class="text-slate-400 text-[11px]">합·위법 핵심 갈림길</span>
-          </div>
-          <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
-            <span class="font-bold text-emerald-400 block mb-0.5">처분 문안 복사</span>
-            <span class="text-slate-400 text-[11px]">보고서에 즉시 붙여넣기</span>
-          </div>
+          <p class="text-slate-400 text-[11px]">
+            • "김비서, 이 캡처 사안(RND-01) 관련해서 KITECH 일상감사 사전 검토 의견서 초안 작성해줘"<br>
+            • "이 판례에서 대법원이 무죄와 유죄를 가른 핵심 법리 분기점만 3줄로 정리해줘"
+          </p>
         </div>
       </div>
-    </section>
-
-    <!-- STEP 4 -->
-    <section class="space-y-3">
-      <div class="flex items-center space-x-2.5">
-        <span class="w-6 h-6 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-xs">4</span>
-        <h2 class="text-base font-bold text-white">김비서 연동 : 캡처 전송 시 심층 법리 분석 및 조서 지원</h2>
-      </div>
-      <p class="text-xs text-slate-400 leading-relaxed pl-8">
-        포털 화면을 보다가 더 깊은 법리 검토나 맞춤형 감사 조서 작성이 필요할 때는, 화면 캡처 이미지를 대화창에 올려주시거나 판례 번호(예: <code class="text-amber-300 bg-amber-950 px-1 py-0.2 rounded border border-amber-800">RND-01</code>)를 알려주시면 김비서가 즉시 핵심 법리 요약 및 실무 조서를 작성해 드립니다.
-      </p>
     </section>
 
     <footer class="pt-6 border-t border-slate-800 text-center text-[11px] text-slate-500">
-      <p>한국생산기술연구원(KITECH) 감사실 · KITECH-Audit 지능형 감사 포털</p>
+      <p>한국생산기술연구원(KITECH) 감사실 · 공공·출연연 감사 그레이존 전문 판례 DB (710선)</p>
     </footer>
   </main>
 </body>
