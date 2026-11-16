@@ -191,7 +191,7 @@
               </div>
               <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-blue-500/10 text-blue-300 border border-blue-500/30">710선 DB</span>
             </div>
-            <h4 class="text-xs sm:text-sm font-bold text-white group-hover:text-blue-300 transition">1. 판례 분석실</h4>
+            <h3 class="text-xs sm:text-sm font-bold text-white group-hover:text-blue-300 transition">1. 판례 분석실</h3>
             <p class="text-[11px] text-slate-400 mt-1 line-clamp-1">공인 판례 검색 및 NST 연동</p>
           </div>
 
@@ -204,7 +204,7 @@
               </div>
               <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-300 border border-indigo-500/30">AI 시뮬레이터</span>
             </div>
-            <h4 class="text-xs sm:text-sm font-bold text-white group-hover:text-indigo-300 transition">2. 판정 모의실</h4>
+            <h3 class="text-xs sm:text-sm font-bold text-white group-hover:text-indigo-300 transition">2. 판정 모의실</h3>
             <p class="text-[11px] text-slate-400 mt-1 line-clamp-1">사건 정황 입력 ➡️ 리스크 판정</p>
           </div>
 
@@ -217,7 +217,7 @@
               </div>
               <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">자가진단</span>
             </div>
-            <h4 class="text-xs sm:text-sm font-bold text-white group-hover:text-emerald-300 transition">3. 일상감사 데스크</h4>
+            <h3 class="text-xs sm:text-sm font-bold text-white group-hover:text-emerald-300 transition">3. 일상감사 데스크</h3>
             <p class="text-[11px] text-slate-400 mt-1 line-clamp-1">5대 분야 리스크 체크 & 의견서</p>
           </div>
 
@@ -230,7 +230,7 @@
               </div>
               <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30">Daily Feed</span>
             </div>
-            <h4 class="text-xs sm:text-sm font-bold text-white group-hover:text-amber-300 transition">4. 인텔리전스 라운지</h4>
+            <h3 class="text-xs sm:text-sm font-bold text-white group-hover:text-amber-300 transition">4. 인텔리전스 라운지</h3>
             <p class="text-[11px] text-slate-400 mt-1 line-clamp-1">최신 출연연 감사 사례 브리핑</p>
           </div>
 
@@ -359,7 +359,7 @@
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
           <div class="relative flex-1">
             <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-sm"></i>
-            <input type="text" id="archive-search" oninput="filterArchive()" placeholder="사건명, 사건번호(예: 2021두40114), 쟁점, 감사인 체크포인트 실시간 검색..." 
+            <input type="text" id="archive-search" aria-label="판례 검색" oninput="filterArchive()" placeholder="사건명, 사건번호(예: 2021두40114), 쟁점, 감사인 체크포인트 실시간 검색..." 
               class="w-full pl-10 pr-4 py-2.5 bg-slate-50 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:bg-white transition" />
           </div>
           <div class="flex items-center space-x-2">
@@ -460,7 +460,7 @@
             </div>
 
             <div>
-              <textarea id="sim-input" rows="6" placeholder="사건의 구체적 경위, 당사자의 소명 내용, 증빙 구비 상태 등을 자유롭게 입력하세요..."
+              <textarea id="sim-input" rows="6" aria-label="사건 정황 입력" placeholder="사건의 구체적 경위, 당사자의 소명 내용, 증빙 구비 상태 등을 자유롭게 입력하세요..."
                 class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-indigo-500 focus:bg-white leading-relaxed transition"></textarea>
             </div>
 
@@ -645,13 +645,13 @@
               <div class="flex items-center justify-between">
                 <span class="text-xs font-bold text-slate-700 flex items-center space-x-1">
                   <i class="fa-solid fa-file-pen text-blue-600"></i>
-                  <span>자동 생성된 일상감사 의견서 초안</span>
+                  <span id="studio-opinion-label">자동 생성된 일상감사 의견서 초안</span>
                 </span>
                 <button onclick="copyStudioOpinion()" class="text-xs text-blue-600 hover:text-blue-800 font-bold cursor-pointer">
                   <i class="fa-regular fa-copy mr-1"></i>전문 복사
                 </button>
               </div>
-              <textarea id="studio-opinion-output" rows="5" readonly 
+              <textarea id="studio-opinion-output" rows="5" readonly aria-labelledby="studio-opinion-label" aria-label="자동 생성된 일상감사 의견서 초안"
                 class="w-full p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs font-mono text-slate-700 leading-relaxed"></textarea>
             </div>
           </div>
@@ -754,7 +754,7 @@
   </main>
 
   <!-- Detail Modal -->
-  <div id="detailModal" onclick="if(event.target === this) closeModal()" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 hidden">
+  <div id="detailModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="if(event.target === this) closeModal()" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 hidden">
     <div class="bg-white rounded-2xl max-w-2xl w-full p-6 max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100 space-y-4">
       <div class="flex items-start justify-between border-b border-slate-100 pb-3">
         <div class="space-y-1">
@@ -765,8 +765,8 @@
           </div>
           <h2 id="modalTitle" class="text-lg font-bold text-slate-900">사례 제목</h2>
         </div>
-        <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 p-1 cursor-pointer">
-          <i class="fa-solid fa-xmark text-lg"></i>
+        <button type="button" onclick="closeModal()" aria-label="팝업 닫기" class="text-slate-400 hover:text-slate-600 p-1 cursor-pointer">
+          <i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i>
         </button>
       </div>
 
