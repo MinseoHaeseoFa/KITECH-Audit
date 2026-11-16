@@ -173,7 +173,8 @@
         <i class="fa-solid fa-magnifying-glass absolute left-4 top-3.5 text-slate-400"></i>
         <input type="text" id="searchInput" aria-label="판례 검색" oninput="applyFilters()" placeholder="사건명, 대립 쟁점(예: 쪼개기, 풀링제, 직무발명, 스핀오프, 사전컨설팅, 자문료), 사건번호, 결정기관 검색..." class="w-full pl-11 pr-24 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
         <div class="absolute right-3 top-2 flex items-center space-x-1">
-          <button onclick="toggleFavoriteOnly()" id="favFilterBtn" aria-label="즐겨찾기한 판례만 보기 0건" aria-pressed="false" class="px-2.5 py-1 text-xs rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-100 transition flex items-center space-x-1">
+          <button onclick="toggleFavoriteOnly()" id="favFilterBtn" aria-pressed="false" class="px-2.5 py-1 text-xs rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-100 transition flex items-center space-x-1">
+            <span style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">즐겨찾기한 판례만 보기</span>
             <i class="fa-solid fa-star text-amber-400" aria-hidden="true"></i>
             <span id="favCount">0</span>
           </button>
@@ -618,10 +619,7 @@
     }
 
     function updateFavCount() {
-      const count = favorites.length;
-      document.getElementById('favCount').innerText = count;
-      const favBtn = document.getElementById('favFilterBtn');
-      if (favBtn) favBtn.setAttribute('aria-label', `즐겨찾기한 판례만 보기 ${count}건`);
+      document.getElementById('favCount').innerText = favorites.length;
     }
 
     function toggleFavoriteOnly() {
